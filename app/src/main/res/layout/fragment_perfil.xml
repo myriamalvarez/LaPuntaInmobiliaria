@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_background"
+        android:minWidth="300dp"
+        tools:context=".ui.perfil.PerfilFragment">
+
+        <Button
+            android:id="@+id/btEditar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            android:layout_marginStart="50dp"
+            android:background="@drawable/button"
+            android:text="Editar"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/btGuardar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etTelefono" />
+
+        <Button
+            android:id="@+id/btGuardar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button"
+            android:text="Guardar"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btEditar" />
+
+        <EditText
+            android:id="@+id/etId"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="Codigo"
+            android:inputType="textPersonName"
+            android:minWidth="300dp"
+            android:textColor="#9C27B0"
+            app:layout_constraintBottom_toTopOf="@+id/tvDni"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvId"
+            app:layout_constraintWidth_default="wrap" />
+
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="Nombre"
+            android:inputType="textPersonName"
+            android:minWidth="300dp"
+            android:textColor="#9C27B0"
+            app:layout_constraintBottom_toTopOf="@+id/tvApellido"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNombre"
+            app:layout_constraintWidth_default="wrap" />
+
+        <EditText
+            android:id="@+id/etDNI"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="DNI"
+            android:inputType="textPersonName"
+            android:minWidth="300dp"
+            android:textColor="#9C27B0"
+            app:layout_constraintBottom_toTopOf="@+id/tvNombre"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDni"
+            app:layout_constraintWidth_default="wrap" />
+
+        <EditText
+            android:id="@+id/etApellido"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="Apellido"
+            android:inputType="textPersonName"
+            android:minWidth="300dp"
+            android:textColor="#9C27B0"
+            app:layout_constraintBottom_toTopOf="@+id/tvEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvApellido"
+            app:layout_constraintWidth_default="wrap" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:minWidth="300dp"
+            android:textColor="#9C27B0"
+            app:layout_constraintBottom_toTopOf="@+id/tvContraseña"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
+
+        <EditText
+            android:id="@+id/etContraseña"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:minWidth="300dp"
+            android:textColor="#9C27B0"
+            app:layout_constraintBottom_toTopOf="@+id/tvTelefono"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvContraseña"
+            app:layout_constraintWidth_default="wrap"/>
+
+        <EditText
+            android:id="@+id/etTelefono"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="Telofono"
+            android:inputType="textPersonName"
+            android:minWidth="300dp"
+            android:textColor="#9C27B0"
+            app:layout_constraintBottom_toTopOf="@+id/btEditar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTelefono"
+            app:layout_constraintWidth_default="wrap" />
+
+        <TextView
+            android:id="@+id/tvId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Codigo"
+            android:textColor="#303F9F"
+            app:layout_constraintBottom_toTopOf="@+id/etId"
+            app:layout_constraintEnd_toEndOf="@+id/etId"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/etId"
+            app:layout_constraintTop_toBottomOf="@+id/tvPerfil" />
+
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre"
+            android:textColor="#303F9F"
+            app:layout_constraintBottom_toTopOf="@+id/etNombre"
+            app:layout_constraintEnd_toEndOf="@+id/etNombre"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/etNombre"
+            app:layout_constraintTop_toBottomOf="@+id/etDNI" />
+
+        <TextView
+            android:id="@+id/tvApellido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apellido"
+            android:textColor="#303F9F"
+            app:layout_constraintBottom_toTopOf="@+id/etApellido"
+            app:layout_constraintEnd_toEndOf="@+id/etApellido"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/etApellido"
+            app:layout_constraintTop_toBottomOf="@+id/etNombre" />
+
+        <TextView
+            android:id="@+id/tvDni"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DNI"
+            android:textColor="#303F9F"
+            app:layout_constraintBottom_toTopOf="@+id/etDNI"
+            app:layout_constraintEnd_toEndOf="@+id/etDNI"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/etDNI"
+            app:layout_constraintTop_toBottomOf="@+id/etId" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-mail"
+            android:textColor="#303F9F"
+            app:layout_constraintBottom_toTopOf="@+id/etEmail"
+            app:layout_constraintEnd_toEndOf="@+id/etEmail"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/etEmail"
+            app:layout_constraintTop_toBottomOf="@+id/etApellido" />
+
+        <TextView
+            android:id="@+id/tvContraseña"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contraseña"
+            android:textColor="#303F9F"
+            app:layout_constraintBottom_toTopOf="@+id/etContraseña"
+            app:layout_constraintEnd_toEndOf="@+id/etContraseña"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/etContraseña"
+            app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+        <TextView
+            android:id="@+id/tvTelefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telefono"
+            android:textColor="#303F9F"
+            app:layout_constraintBottom_toTopOf="@+id/etTelefono"
+            app:layout_constraintEnd_toEndOf="@+id/etTelefono"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/etTelefono"
+            app:layout_constraintTop_toBottomOf="@+id/etContraseña" />
+
+        <TextView
+            android:id="@+id/tvPerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perfil"
+            android:textColor="#303F9F"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvId"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
